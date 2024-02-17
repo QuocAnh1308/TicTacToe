@@ -1,11 +1,9 @@
 let x = true;
 function Insert(id)
 {
-    Mark(id, x);
+    Mark(id);
     Check();
-    x = !x;
 }
-
 let table = [];
 for(let i = 0; i < 3; i++)
 {
@@ -16,7 +14,7 @@ for(let i = 0; i < 3; i++)
     }
     table.push(row);
 }
-function Mark(id, x)
+function Mark(id)
 {
     let m = parseInt(id[3]) - 1, n = parseInt(id[4]) - 1;
     if(table[m][n] == 0)
@@ -25,11 +23,13 @@ function Mark(id, x)
         {
             table[m][n] = 1;
             document.getElementById(id).innerHTML = '<img src="TicTacToeX.png" alt="">';
+            x = !x;
         }
         else
         {
             table[m][n] = 2;
             document.getElementById(id).innerHTML = '<img src="TicTacToeO.png" alt="">';
+            x = !x;
         }
     }
 }
