@@ -24,12 +24,12 @@ function Mark(id, x)
         if(x == true)
         {
             table[m][n] = 1;
-            document.getElementById(id).innerHTML = '<img src="../Image/TicTacToeX.png" alt="">';
+            document.getElementById(id).innerHTML = '<img src="TicTacToeX.png" alt="">';
         }
         else
         {
             table[m][n] = 2;
-            document.getElementById(id).innerHTML = '<img src="../Image/TicTacToeO.png" alt="">';
+            document.getElementById(id).innerHTML = '<img src="TicTacToeO.png" alt="">';
         }
     }
 }
